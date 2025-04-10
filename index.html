@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,6 +26,26 @@
             font-size: 1.5em;
             margin-bottom: 30px;
         }
+
+        .audio-player {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .audio-player h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        audio {
+            width: 100%;
+            outline: none;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -59,6 +78,14 @@
     <h1>Radio Villa Guillermina</h1>
     <h2>FM 95.3 - ¡Tu radio amiga!</h2>
 
+    <div class="audio-player">
+        <h3>📻 Escuchanos en vivo</h3>
+        <audio controls>
+            <source src="http://37.157.242.101:31860/;" type="audio/mpeg">
+            Tu navegador no soporta el reproductor de audio.
+        </audio>
+    </div>
+
     <div class="social-links">
         <a href="https://wa.me/543482506045" target="_blank">📱 WhatsApp</a>
         <a href="https://www.facebook.com/villaguillerminasf" target="_blank">📘 Facebook</a>
@@ -71,3 +98,4 @@
     </footer>
 </body>
 </html>
+
