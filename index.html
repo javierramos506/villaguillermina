@@ -2,36 +2,34 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Noticias del Norte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FM 95.3 Villa Guillermina</title>
   <style>
     :root {
-      --verde-oscuro: #1b4332;
-      --verde-medio: #2d6a4f;
-      --verde-claro: #b7e4c7;
-      --fondo: #ffffff;
-      --texto: #1a1a1a;
-      --contraste: #f4f4f4;
+      --verde-medio: #198754;
+      --verde-oscuro: #145c3c;
+      --fondo-claro: #f9f9f9;
+      --texto-principal: #222222;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--contraste);
-      color: var(--texto);
+      background-color: var(--fondo-claro);
+      color: var(--texto-principal);
       line-height: 1.6;
     }
 
     header {
       background-color: var(--verde-oscuro);
-      color: #ffffff;
-      padding: 20px;
+      color: white;
+      padding: 1rem;
       text-align: center;
     }
 
-    header h1 {
+    h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2rem;
     }
 
     nav {
@@ -43,113 +41,88 @@
     }
 
     nav a {
-      color: #ffffff;
-      text-decoration: none;
+      color: #ffffff; /* Blanco puro para mejor contraste */
       font-weight: bold;
-      transition: color 0.3s;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
 
-    nav a:focus,
-    nav a:hover {
-      color: var(--verde-claro);
-      outline: 2px solid #ffffff;
-      outline-offset: 2px;
+    nav a:hover,
+    nav a:focus {
+      background-color: #ffffff;
+      color: var(--verde-medio);
+      outline: none;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 15px;
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .news-card {
-      background-color: var(--fondo);
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      overflow: hidden;
-      transition: transform 0.2s;
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .news-card:hover {
-      transform: scale(1.01);
-    }
-
-    .news-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      background-color: #d3d3d3;
-    }
-
-    .news-content {
-      padding: 15px;
-    }
-
-    .news-content h2 {
+    section h2 {
       margin-top: 0;
-      color: var(--verde-oscuro);
-      font-size: 1.5em;
+      color: var(--verde-medio);
     }
 
     footer {
-      background-color: #081c15;
-      color: #e0e0e0;
+      background-color: var(--verde-oscuro);
+      color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
+      padding: 1rem;
     }
 
+    a {
+      color: var(--verde-medio);
+    }
+
+    a:hover,
     a:focus {
-      outline: 2px dashed #000;
-      outline-offset: 2px;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header role="banner">
-    <h1>Noticias del Norte</h1>
-    <p>Las últimas noticias de Villa Guillermina y el norte de Santa Fe</p>
+  <header>
+    <h1>FM 95.3 Villa Guillermina</h1>
   </header>
-
-  <nav role="navigation" aria-label="Navegación principal">
-    <a href="#">Inicio</a>
-    <a href="https://javierramos506.github.io/villaguillermina/locales">Locales</a>
-    <a href="#">Provinciales</a>
-    <a href="#">Nacionales</a>
-    <a href="#">Contacto</a>
+  <nav>
+    <a href="https://wa.me/543482506045" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.facebook.com/villaguillerminasf" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.youtube.com/@villaguillerminasf4935" target="_blank" rel="noopener">YouTube</a>
   </nav>
-
-  <main id="contenido">
-    <div class="container">
-      <section aria-labelledby="noticia1">
-        <article class="news-card">
-          <img src="" class="news-image" alt="Imagen ilustrativa de las elecciones" />
-          <div class="news-content">
-            <h2 id="noticia1">Elecciones en el norte</h2>
-            <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
-          </div>
-        </article>
-      </section>
-
-      <section aria-labelledby="noticia2">
-        <article class="news-card">
-          <img src="" class="news-image" alt="Imagen ilustrativa del triunfo de Marcon" />
-          <div class="news-content">
-            <h2 id="noticia2">Amplio triunfo de Marcon</h2>
-            <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
-          </div>
-        </article>
-      </section>
-    </div>
+  <main>
+    <section>
+      <h2>Bienvenidos</h2>
+      <p>Gracias por visitar el sitio web oficial de FM 95.3 Villa Guillermina. Estamos comprometidos con informar y entretener a nuestra comunidad del norte de Santa Fe.</p>
+    </section>
+    <section>
+      <h2>Últimas Noticias</h2>
+      <p>Muy pronto estaremos compartiendo las últimas novedades de la región. ¡Volvé pronto!</p>
+    </section>
   </main>
-
-  <footer role="contentinfo">
-    &copy; 2025 Noticias del Norte - Villa Guillermina. Todos los derechos reservados.<br/>
-    Sitio oficial de Radio Villa Guillermina - Santa Fe, Argentina<br/>
-    Más contenido próximamente...
+  <footer>
+    <p>&copy; 2025 FM 95.3 Villa Guillermina - Todos los derechos reservados</p>
   </footer>
-
 </body>
 </html>
