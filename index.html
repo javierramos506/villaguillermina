@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Noticias del Norte</title>
   <style>
+    :root {
+      --verde-oscuro: #1b4332;
+      --verde-medio: #2d6a4f;
+      --verde-claro: #b7e4c7;
+      --fondo: #ffffff;
+      --texto: #1a1a1a;
+      --contraste: #f4f4f4;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #222; /* mejor contraste */
+      background-color: var(--contraste);
+      color: var(--texto);
+      line-height: 1.6;
     }
 
     header {
-      background-color: #1b4332;
+      background-color: var(--verde-oscuro);
       color: #ffffff;
       padding: 20px;
       text-align: center;
@@ -25,7 +35,7 @@
     }
 
     nav {
-      background-color: #2d6a4f;
+      background-color: var(--verde-medio);
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -39,8 +49,11 @@
       transition: color 0.3s;
     }
 
+    nav a:focus,
     nav a:hover {
-      color: #b7e4c7;
+      color: var(--verde-claro);
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
     }
 
     .container {
@@ -50,7 +63,7 @@
     }
 
     .news-card {
-      background-color: #ffffff;
+      background-color: var(--fondo);
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       margin-bottom: 20px;
@@ -75,13 +88,8 @@
 
     .news-content h2 {
       margin-top: 0;
-      color: #1b4332;
+      color: var(--verde-oscuro);
       font-size: 1.5em;
-    }
-
-    .news-content p {
-      line-height: 1.6;
-      color: #333;
     }
 
     footer {
@@ -91,46 +99,53 @@
       padding: 20px;
       font-size: 0.95em;
     }
+
+    a:focus {
+      outline: 2px dashed #000;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <header role="banner">
     <h1>Noticias del Norte</h1>
     <p>Las últimas noticias de Villa Guillermina y el norte de Santa Fe</p>
   </header>
 
-  <nav>
-    <a href="https://javierramos506.github.io/villaguillermina">Inicio</a>
+  <nav role="navigation" aria-label="Navegación principal">
+    <a href="#">Inicio</a>
     <a href="https://javierramos506.github.io/villaguillermina/locales">Locales</a>
     <a href="#">Provinciales</a>
     <a href="#">Nacionales</a>
     <a href="#">Contacto</a>
   </nav>
 
-  <div class="container">
-    <div class="news-card">
-      <div class="news-image">
-        <!-- Acá podés poner una imagen: <img src="ruta.jpg" class="news-image" alt="Elecciones"> -->
-      </div>
-      <div class="news-content">
-        <h2>Elecciones en el norte</h2>
-        <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
-      </div>
-    </div>
+  <main id="contenido">
+    <div class="container">
+      <section aria-labelledby="noticia1">
+        <article class="news-card">
+          <img src="" class="news-image" alt="Imagen ilustrativa de las elecciones" />
+          <div class="news-content">
+            <h2 id="noticia1">Elecciones en el norte</h2>
+            <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
+          </div>
+        </article>
+      </section>
 
-    <div class="news-card">
-      <div class="news-image">
-        <!-- Acá podés poner una imagen: <img src="ruta.jpg" class="news-image" alt="Triunfo de Marcon"> -->
-      </div>
-      <div class="news-content">
-        <h2>Amplio triunfo de Marcon</h2>
-        <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
-      </div>
+      <section aria-labelledby="noticia2">
+        <article class="news-card">
+          <img src="" class="news-image" alt="Imagen ilustrativa del triunfo de Marcon" />
+          <div class="news-content">
+            <h2 id="noticia2">Amplio triunfo de Marcon</h2>
+            <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
+          </div>
+        </article>
+      </section>
     </div>
-  </div>
+  </main>
 
-  <footer>
+  <footer role="contentinfo">
     &copy; 2025 Noticias del Norte - Villa Guillermina. Todos los derechos reservados.<br/>
     Sitio oficial de Radio Villa Guillermina - Santa Fe, Argentina<br/>
     Más contenido próximamente...
