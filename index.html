@@ -86,9 +86,11 @@
 
     .news-image {
       width: 100%;
-      height: 250px;
+      height: auto;
+      aspect-ratio: 1200 / 250;
       object-fit: cover;
       background-color: #d3d3d3;
+      display: block;
     }
 
     .news-content {
@@ -134,7 +136,7 @@
     <div class="container">
       <section aria-labelledby="noticia1">
         <article class="news-card">
-          <img src="ruta-de-la-imagen1.jpg" class="news-image" loading="lazy" alt="Imagen ilustrativa de las elecciones" />
+          <img src="ruta-de-la-imagen1.jpg" class="news-image" loading="lazy" width="1200" height="250" alt="Imagen ilustrativa de las elecciones" />
           <div class="news-content">
             <h2 id="noticia1">Elecciones en el norte</h2>
             <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
@@ -144,7 +146,7 @@
 
       <section aria-labelledby="noticia2">
         <article class="news-card">
-          <img src="ruta-de-la-imagen2.jpg" class="news-image" loading="lazy" alt="Imagen ilustrativa del triunfo de Marcon" />
+          <img src="ruta-de-la-imagen2.jpg" class="news-image" loading="lazy" width="1200" height="250" alt="Imagen ilustrativa del triunfo de Marcon" />
           <div class="news-content">
             <h2 id="noticia2">Amplio triunfo de Marcon</h2>
             <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
