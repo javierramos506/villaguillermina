@@ -2,16 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Noticias del Norte</title>
+
+  <!-- Mejora de rendimiento para fuentes externas (si se usan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <style>
     :root {
       --verde-oscuro: #1b4332;
-      --verde-medio: #1a4d36; /* Mejorado para contraste */
+      --verde-medio: #1a4d36;
       --verde-claro: #b7e4c7;
       --fondo: #ffffff;
-      --texto: #000000; /* Mayor contraste */
-      --contraste: #f0f0f0; /* Fondo más oscuro */
+      --texto: #000000;
+      --contraste: #f0f0f0;
     }
 
     body {
@@ -97,7 +103,7 @@
 
     footer {
       background-color: #081c15;
-      color: #ffffff; /* Mejorado para contraste */
+      color: #ffffff;
       text-align: center;
       padding: 20px;
       font-size: 0.95em;
@@ -128,7 +134,7 @@
     <div class="container">
       <section aria-labelledby="noticia1">
         <article class="news-card">
-          <img src="" class="news-image" alt="Imagen ilustrativa de las elecciones" />
+          <img src="ruta-de-la-imagen1.jpg" class="news-image" loading="lazy" alt="Imagen ilustrativa de las elecciones" />
           <div class="news-content">
             <h2 id="noticia1">Elecciones en el norte</h2>
             <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
@@ -138,7 +144,7 @@
 
       <section aria-labelledby="noticia2">
         <article class="news-card">
-          <img src="" class="news-image" alt="Imagen ilustrativa del triunfo de Marcon" />
+          <img src="ruta-de-la-imagen2.jpg" class="news-image" loading="lazy" alt="Imagen ilustrativa del triunfo de Marcon" />
           <div class="news-content">
             <h2 id="noticia2">Amplio triunfo de Marcon</h2>
             <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
