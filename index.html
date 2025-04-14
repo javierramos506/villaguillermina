@@ -1,98 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radio Villa Guillermina - FM 95.3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noticias del Norte</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-        .audio-player {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 20px;
-            margin: 30px auto;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        .audio-player h3 {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            color: #fff;
-        }
-        audio {
-            width: 100%;
-            outline: none;
-        }
+    header {
+      background-color: #1b4332;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .social-links a {
-            display: inline-block;
-            background: white;
-            color: #2c3e50;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .social-links a:hover {
-            background: #f1f1f1;
-            transform: scale(1.05);
-        }
-        footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #ddd;
-        }
-    </style>
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #2d6a4f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #95d5b2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .news-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .news-card:hover {
+      transform: scale(1.01);
+    }
+
+    .news-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background-color: #d3d3d3; /* Espacio gris si no hay imagen */
+    }
+
+    .news-content {
+      padding: 15px;
+    }
+
+    .news-content h2 {
+      margin-top: 0;
+      color: #1b4332;
+    }
+
+    .news-content p {
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #081c15;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Radio Villa Guillermina</h1>
-    <h2>FM 95.3 - ¡Tu radio amiga!</h2>
 
-    <div class="audio-player">
-        <h3>📻 Escuchanos en vivo</h3>
-        <audio controls>
-            <source src="http://villaguillermina.ct.ws/proxy.php" type="audio/mpeg">
-            Tu navegador no soporta el reproductor de audio.
-        </audio>
+  <header>
+    <h1>Noticias del Norte</h1>
+    <p>Las últimas noticias de Villa Guillermina y el norte de Santa Fe</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Locales</a>
+    <a href="#">Provinciales</a>
+    <a href="#">Nacionales</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <div class="news-card">
+      <div class="news-image">
+        <!-- Acá podés poner una imagen: <img src="ruta.jpg" class="news-image" alt="Elecciones"> -->
+      </div>
+      <div class="news-content">
+        <h2>Elecciones en el norte</h2>
+        <p>Se desarrollaron las elecciones en diferentes localidades del norte santafesino, con una participación activa de los ciudadanos.</p>
+      </div>
     </div>
 
-    <div class="social-links">
-        <a href="https://wa.me/543482506045" target="_blank">📱 WhatsApp</a>
-        <a href="https://www.facebook.com/villaguillerminasf" target="_blank">📘 Facebook</a>
-        <a href="https://www.youtube.com/@villaguillerminasf4935" target="_blank">▶️ YouTube</a>
+    <div class="news-card">
+      <div class="news-image">
+        <!-- Acá podés poner una imagen: <img src="ruta.jpg" class="news-image" alt="Triunfo de Marcon"> -->
+      </div>
+      <div class="news-content">
+        <h2>Amplio triunfo de Marcon</h2>
+        <p>El candidato Marcon se impuso por amplia diferencia en Villa Guillermina, consolidando su liderazgo local.</p>
+      </div>
     </div>
+  </div>
 
-    <footer>
+  <footer>
+    &copy; 2025 Noticias del Norte - Villa Guillermina. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
+
         Sitio oficial de Radio Villa Guillermina - Santa Fe, Argentina<br/>
         Más contenido próximamente...
     </footer>
